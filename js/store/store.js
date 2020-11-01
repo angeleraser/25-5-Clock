@@ -23,13 +23,12 @@ const render = () => {
   const clock = getState().clock;
   sessionLengthController.updateLength(clock.session.length);
   breakLengthController.updateLength(clock.break.length);
-  const { minutes, seconds, name } = clock.current;
+  const { minutes, seconds } = clock.current;
   if (minutes === 0 && seconds === 0) {
-    ClockTimer.update(getParsedTime(0, 0));
+    ClockTimer.updateTimeLeft(getParsedTime(0, 0));
   } else {
-    ClockTimer.update(getParsedTime(minutes, seconds));
+    ClockTimer.updateTimeLeft(getParsedTime(minutes, seconds));
   }
-  console.log(name, getParsedTime(minutes, seconds));
 };
 onUpdateStore(render);
 dispatch(timerSetConfig({ ...getState().clock.session }));

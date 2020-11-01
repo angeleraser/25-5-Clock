@@ -45,6 +45,14 @@ const LengthController = (controllerHTML, controllerName) => {
         );
       }
     },
+    disableButtons() {
+      incrementBtn.setAttribute("disabled", true);
+      decrementBtn.setAttribute("disabled", true);
+    },
+    enableButtons() {
+      incrementBtn.removeAttribute("disabled");
+      decrementBtn.removeAttribute("disabled");
+    },
   };
 };
 
