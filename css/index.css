@@ -1,0 +1,9 @@
+/* Base styles */
+@import "./base/reset.min.css";
+@import "./base/settings.css";
+
+/* Fonts */
+@import "./fonts/fonts.css";
+
+/* Components */
+@import "./components/clock.css";

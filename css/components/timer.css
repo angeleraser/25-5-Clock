@@ -1,0 +1,67 @@
+.timer {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "Header Header"
+    "Timer Timer"
+    "StartPause Reset";
+  row-gap: 30px;
+  place-items: center;
+  max-width: 260px;
+  background-color: var(--primary-black);
+  border-radius: 6px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.8) inset;
+  border: 6px solid var(--primary-black);
+  font-family: "Roboto", sans-serif;
+  padding: 26px;
+}
+
+.timer header {
+  grid-area: Header;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-yellow);
+  font-size: 32px;
+}
+
+.timer header::after {
+  content: " -";
+}
+
+.timer header::before {
+  content: "- ";
+}
+
+.timer .time-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--tertiary-blue);
+  font-size: 52px;
+  font-weight: 700;
+  grid-area: Timer;
+  min-height: 64px;
+}
+
+.one-minute-left-time {
+  animation: pulseTime 1s infinite;
+  color: red !important;
+}
+
+@keyframes pulseTime {
+  100% {
+    font-size: 48px;
+  }
+}
+
+.timer button {
+  background-color: var(--secondary-blue);
+  border: none;
+  min-height: 28px;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--primary-black);
+  border-radius: 40px;
+  padding: 7px 14px;
+}

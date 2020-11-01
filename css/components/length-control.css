@@ -1,0 +1,61 @@
+.length-control {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px 40px;
+  row-gap: 20px;
+  grid-template-areas:
+    "Header Header Header"
+    "Decrement . Increment";
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  max-width: 180px;
+  position: relative;
+}
+
+.length-control h2,
+.length-control header {
+  font-size: 26px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.length-control header {
+  grid-area: Header;
+  color: var(--tertiary-blue);
+  text-align: center;
+  font-style: italic;
+}
+
+.length-control h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tertiary-blue);
+  background-color: var(--primary-black);
+  border-radius: 40px;
+  height: 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-weight: 700;
+}
+
+.length-control .increment {
+  grid-area: Increment;
+}
+
+.length-control .decrement {
+  grid-area: Decrement;
+}
+
+.length-control button {
+  background-color: var(--secondary-blue);
+  border: none;
+  font-size: 18px;
+  line-height: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.8);
+  color: var(--primary-black);
+  z-index: 20;
+}

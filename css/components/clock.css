@@ -1,0 +1,51 @@
+@import "./length-control.css";
+@import "./timer.css";
+
+.clock-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  row-gap: 40px;
+  padding: 60px 0;
+  max-width: 480px;
+  width: 100%;
+}
+
+.clock-wrapper .header {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--primary-yellow);
+}
+
+.clock-wrapper .header p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--primary-black);
+}
+
+.clock-wrapper .header a {
+  text-decoration: none;
+  color: var(--primary-black);
+}
+
+@media screen and (min-width: 520px) {
+  .clock-wrapper {
+    grid-template-columns: repeat(auto-fill, 160px);
+    place-content: center;
+    border-radius: 20px;
+    column-gap: 40px;
+    border: 8px solid var(--primary-black);
+    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.8);
+  }
+
+  .clock-wrapper .header {
+    grid-column: span 2;
+  }
+
+  .clock-wrapper .timer {
+    grid-column: span 2;
+    max-width: 400px;
+  }
+}

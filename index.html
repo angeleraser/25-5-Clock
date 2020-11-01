@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <script src="https://use.fontawesome.com/bba0855fd5.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>25+5 Clock</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Clock -->
+      <main class="clock-wrapper">
+        <!-- Header  -->
+        <div class="header">
+          25+5 Clock <br />
+          <p>By <a href="#">@angeleraser</a></p>
+        </div>
+        <!-- Break -->
+        <section id="break-length-controller" class="length-control">
+          <header id="break-label">Break</header>
+          <button class="increment" id="break-increment">
+            <i class="fa fa-plus"></i>
+          </button>
+          <h2 id="break-length">5</h2>
+          <button class="decrement" id="break-decrement">
+            <i class="fa fa-minus"></i>
+          </button>
+        </section>
+        <!-- Session -->
+        <section id="session-length-controller" class="length-control">
+          <header id="session-label">Session</header>
+          <button class="increment" id="session-increment">
+            <i class="fa fa-plus"></i>
+          </button>
+          <h2 id="session-length">25</h2>
+          <button class="decrement" id="session-decrement">
+            <i class="fa fa-minus"></i>
+          </button>
+        </section>
+        <!-- Timer  -->
+        <section id="timer" class="timer">
+          <header id="timer-label">Session</header>
+          <div class="time-left" id="time-left">25:00</div>
+          <button class="start-stop" id="start_stop">
+            <i class="fa fa-play"></i><i class="fa fa-pause"></i>
+          </button>
+          <button class="reset" id="reset">
+            <i class="fa fa-refresh"></i>
+          </button>
+          <audio id="beep" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+      </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./js/store/store.js"></script>
+    <script type="module" src="./js/components/Timer.js"></script>
+    <script type="module" src="./js/components/LengthController.js"></script>
+    <script type="module" src="./js/reducers/reducers.js"></script>
+    <script type="module" src="./js/types/types.js"></script>
+    <script type="module" src="./js/actions/controller.js"></script>
+    <script type="module" src="./js/helpers/helpers.js"></script>
+  </body>
+</html>
